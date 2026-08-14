@@ -26,6 +26,8 @@
      Referer -> 200) and reproduced/fixed in a real (non-headless) browser. -->
 <meta name="referrer" content="no-referrer">
 <link rel="stylesheet" href="style.css?v=6">
+<script>/* perf-lite: drop blend/blur effects on low-power devices. ?fx=lite or ?fx=full to override (persisted). */
+(function(){try{var k="slippy-fx",m=location.search.match(/[?&]fx=(lite|full)/),v=m?m[1]:localStorage.getItem(k);if(m)localStorage.setItem(k,v);if(v==="lite"||(v!=="full"&&(navigator.hardwareConcurrency||8)<=2))document.documentElement.classList.add("perf-lite");}catch(e){}})();</script>
 </head>
 <body>
 
